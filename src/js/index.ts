@@ -35,17 +35,13 @@ function getScores(): void {
 
 // Function to Post the new JSON object.
 function addToScoreboard(event: MouseEvent) {
-    axios.post(baseURL + '/highscores', {
-        Name: inputName.value,
-        Score: Number(inputScore.value)
-    })
-    .then(function (response) {
-        console.log(response);
-    })
-    .catch(function (error) {
-        console.log(error);
-    });
-    getScores();
+    if(inputName.value != "" || inputScore.value != "")
+    {
+        axios.post(baseURL + '/highscores', {
+            Name: inputName.value,
+            Score: Number(inputScore.value)
+        });
+    }
 }
 
 getScores();

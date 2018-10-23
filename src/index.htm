@@ -8,11 +8,12 @@
 
 <body>
   <div id="content">
-    <h1>The Highscore List</h1>
-    <form action="" target="_blank">
     <table id="scoreboard">
       <thead>
         <tr>
+          <td colspan="2"><h1>The Highscore List</h1></td>
+        </tr>
+        <tr id="boardtitles">
           <td>Name</td>
           <td>Score</td>
         </tr>
@@ -26,8 +27,7 @@
         </tr>
       </tfoot>
     </table>
-    <input type="submit" id="addbutton" value="Add to Scoreboard" />
-    </form>
+    <button id="addbutton">Add to Scoreboard</button>
   </div>
     
   <script src="bundle.js"></script>

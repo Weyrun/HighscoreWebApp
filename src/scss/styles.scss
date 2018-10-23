@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
-@import url('https://fonts.googleapis.com/css?family=Signika+Negative');
+@import url('https://fonts.googleapis.com/css?family=Signika+Negative:400, 700, 900');
 
 body {    
-    background-color: #c6e7ff;
-    color: #212121;
+    background-color: #eee;
+    color: #323232;
     font-family: 'Roboto', sans-serif;
-    font-size: 17px;    
+    font-size: 19px;    
     font-weight: 900;    
     text-transform: uppercase;
     margin: 0;
-    padding: 0;
+    padding: 30px 0px;
 }
 
 html {
@@ -20,31 +20,37 @@ html {
 #content {
     margin-left: auto;
     margin-right: auto;
-    width: 60%;
+    width: 30%;
     text-align: center;
 }
 
-p {
-    margin-bottom: 20px;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1 {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    font-size: 40px;
 }
 
 table {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #0099ff;    
-    box-shadow: 0 3px 0 rgba(49,112,142, 0.55);
+    border-top: 4px solid #0099ff;
+    border-bottom: 4px solid #0099ff;    
+    box-shadow: 0 3px 5px rgba(49,112,142, 0.55);
+    color: #323232;
 }
 
 table > thead > tr {
+    background-color: #fff;
+    font-size: 22px;
+    height: 100px;
+}
+
+table > thead > tr#boardtitles {
     background-color: #0099ff;
     color: #fff;
-
+    font-size: 22px;
+    height: 60px;
 }
 
 table > tbody > tr {
@@ -57,13 +63,12 @@ table > tfoot > tr {
 
 td {
     padding: 12px;
-    width: 20%;
     text-align: center;
 }
 
 input {
     display: block;
-    color: #333;
+    color: #323232;
     padding: 9px;
     font-family: 'Roboto', sans-serif;
     font-size: 17px;
@@ -73,31 +78,28 @@ input {
     width: 80%;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 10px;
 }
 
 button {    
-    background-color: #2d617a;
-    border: 0 none;
-    box-shadow: 0 3px 0 rgba(49,112,142, 0.55);
-    color: #eee;
+    background-color: #dbf1ff;
+    border: 4px solid #0099ff ;
+    box-shadow: 0 3px 5px rgba(49,112,142, 0.55);
+    color: #323232;
     display: block;
     font-family: 'Roboto', sans-serif;
     font-size: 22px;
     font-weight: 900;    
     letter-spacing: 0.3px;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 10px;
     padding: 20px 20px;
     transition: all 0.3s ease-in-out 0s;
-    width: 100%;
+    width: 50%;
 }
 
 button:hover {
-    background-color: #427f9b;
+    border-color: #36adfc;
     cursor: pointer;
     transition: all 0.3s ease-in-out 0s;
-}
-
-button:active {
-    box-shadow: 0;
 }
