@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 @import url('https://fonts.googleapis.com/css?family=Signika+Negative:400, 700, 900');
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 
 body {    
     background-color: #eee;
@@ -27,7 +28,7 @@ html {
 h1 {
     margin-top: 0;
     margin-bottom: 0px;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 table {
@@ -37,6 +38,7 @@ table {
     border-top: 4px solid #0099ff;
     border-bottom: 4px solid #0099ff;    
     box-shadow: 0 3px 5px rgba(49,112,142, 0.55);
+    font-family: 'Press Start 2P', cursive;
     color: #323232;
 }
 
@@ -49,12 +51,13 @@ table > thead > tr {
 table > thead > tr#boardtitles {
     background-color: #0099ff;
     color: #fff;
-    font-size: 22px;
+    font-size: 17px;
     height: 60px;
 }
 
 table > tbody > tr {
     background-color: #fff;
+    font-size: 17px;
 }
 
 table > tfoot > tr {
