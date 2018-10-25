@@ -11,7 +11,9 @@ let addbutton: HTMLButtonElement = <HTMLButtonElement> document.getElementById("
 addbutton.addEventListener("click", addToScoreboard);
 
 // Variable to store the general URL used.
-var baseURL: string = "https://mmo-restcalculatorservice.azurewebsites.net/api";
+var baseURL: string = "http://localhost:57055/api";
+
+//"https://mmo-restcalculatorservice.azurewebsites.net/api";
 
 // Function to trim the double quotes from the JSON strings.
 function trimQuotes (string: string)
@@ -25,11 +27,11 @@ function getScores(): void {
     .then(function (response) {
         for (let d of response.data) {
             scoreboard.appendChild(document.createElement("tr")).setAttribute("id", JSON.stringify(d.id));
-
             let tablerow = document.getElementById(JSON.stringify(d.id));
             tablerow.appendChild(document.createElement("td")).innerHTML = trimQuotes(JSON.stringify(d.name));
             tablerow.appendChild(document.createElement("td")).innerHTML = JSON.stringify(d.score);
         }
+        
     });
 }
 
@@ -37,7 +39,7 @@ function getScores(): void {
 function addToScoreboard(event: MouseEvent) {
     if(inputName.value != "" || inputScore.value != "")
     {
-        axios.post(baseURL + '/highscores', {
+        axios.post(baseURL + '/highscores/add', {
             Name: inputName.value,
             Score: Number(inputScore.value)
         });
@@ -45,3 +47,8 @@ function addToScoreboard(event: MouseEvent) {
 }
 
 getScores();
+
+
+
+
+
